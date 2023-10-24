@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GetShopTV_test/static/css/main.073c9b0a.css",
+    "main.js": "/GetShopTV_test/static/js/main.54277093.js",
+    "index.html": "/GetShopTV_test/index.html",
+    "main.073c9b0a.css.map": "/GetShopTV_test/static/css/main.073c9b0a.css.map",
+    "main.54277093.js.map": "/GetShopTV_test/static/js/main.54277093.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.54277093.js"
+  ]
+}
