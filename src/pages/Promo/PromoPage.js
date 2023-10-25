@@ -4,7 +4,7 @@ import styles from './PromoPage.module.css';
 
 export default function PromoPage() {
     return (
-        <div>
+        <div className={styles.promoPage}>
             <Video/>
             <Banner/>
         </div>
