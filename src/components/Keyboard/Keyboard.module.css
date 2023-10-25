@@ -1,0 +1,22 @@
+.keyBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.keyBoardItem{
+    cursor: pointer;
+    border: 3px solid black;
+    padding: 14px 37px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
+}
+.keyBoardItem_big{
+    grid-column: span 2;
+}
+.keyBoardItem_active{
+    background-color: black;
+    color: white;
+}
