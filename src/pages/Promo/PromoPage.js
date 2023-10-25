@@ -1,4 +1,12 @@
-export default function PromoPage() {
+import Video from "../../components/Video/Video";
+import Banner from "../../components/Banner/Banner";
+import styles from './PromoPage.module.css';
 
-    return (<div>Promo page</div>);
+export default function PromoPage() {
+    return (
+        <div>
+            <Video/>
+            <Banner/>
+        </div>
+    );
 }
