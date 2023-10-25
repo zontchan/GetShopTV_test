@@ -1,0 +1,7 @@
+.sidePanel{
+    display: flex;
+    justify-content: center;
+    background-color: #86D3F4;
+    width: 380px;
+    height: 100%;
+}
