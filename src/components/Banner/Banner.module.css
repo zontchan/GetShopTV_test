@@ -1,0 +1,39 @@
+.banner{
+    background-color: #86D3F4;
+    padding: 20px 10px 10px;
+    text-align: center;
+    max-width: 251px;
+}
+.bannerContent{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bannerTitle{
+    font-weight:500;
+}
+.qrCode{
+
+    align-self: center;
+}
+
+.bannerText{
+    font-size: 14px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.okButton{
+    background-color: black;
+    color:#86D3F4;
+    text-transform: uppercase;
+    padding: 16px 67px;
+    outline: none;
+    transition: all 0.1s ease-in-out;
+}
+.okButton:hover{
+    outline: 2px solid #86D3F4;
+    outline-offset: -5px;
+}
+
