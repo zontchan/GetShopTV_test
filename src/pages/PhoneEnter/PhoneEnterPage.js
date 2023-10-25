@@ -33,6 +33,11 @@ export default function PhoneEnterPage() {
             dispatch(setActiveKey({activeKey: 'Remove', category: 'keyboard'}));
             dispatch(deleteNumber());
         }
+        if(!isNaN(e.key) && e.code !== 'Space'){
+            if(phone.length === 10) return;
+            dispatch(setActiveKey({activeKey: e.key, category: 'keyboard'}))
+            dispatch(addNumber(e.key));
+        }
     }
 
     useEffect(() => {
