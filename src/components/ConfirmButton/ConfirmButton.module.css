@@ -1,0 +1,16 @@
+.confirmButton{
+    width: 100%;
+    text-transform: uppercase;
+    color: #4E4E4E;
+    border: 2px solid #4E4E4E;
+    padding: 14px 19px;
+}
+.confirmButton.active:focus{
+    outline: 1px solid white;
+    outline-offset: -7px;
+}
+.confirmButton.active{
+    background-color: black;
+    color: white;
+    border: none;
+}
