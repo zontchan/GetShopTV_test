@@ -1,0 +1,21 @@
+.finalInfoPage{
+    width: 100%;
+    height: 100%;
+}
+
+.sideContent{
+    max-width: 284px;
+    text-align: center;
+    margin-top: 265px;
+}
+
+.title{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.subtitle{
+    font-size: 14px;
+}
