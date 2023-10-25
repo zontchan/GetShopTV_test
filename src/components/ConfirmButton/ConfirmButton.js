@@ -15,7 +15,7 @@ export default function ConfirmButton({isDisabled}) {
     }, [activeKey]);
 
     return  (
-        <Link to={'/final-info'} ><button className={isDisabled ? `${styles.confirmButton}` : `${styles.confirmButton} ${styles.active}`}
+        <Link to={'/final-info'}><button className={isDisabled ? `${styles.confirmButton}` : `${styles.confirmButton} ${styles.active}`}
                                           ref={ref}
                                           disabled={isDisabled}>
             Подтвердить номер</button></Link>

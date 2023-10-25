@@ -12,7 +12,7 @@ export default function CloseButton({buttonStyle}) {
                 ref.current.focus();
             } else ref.current.blur();
         }
-    }, [activeKey, ref.current]);
+    }, [activeKey]);
 
     return (<Link to={'/'}>
         <button  ref={ref} className={buttonStyle === 'phoneEnterPageCloseButton' ? `${styles.closeButton} ${styles.phoneEnterPageCloseButton}` : `${styles.closeButton} ${styles.finalInfoPageCloseButton}`}>

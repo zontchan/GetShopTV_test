@@ -14,8 +14,7 @@ export default function PhoneEnterPage() {
     const phone =useSelector((state) => state.phoneNumber);
     const dispatch = useDispatch();
 
-
-    const handleKeyDown =(e) => {
+    const handleKeyDown = (e) => {
         if(e.key === 'Enter'){
             if(category === 'keyboard') {
                 if(activeKey === 'Remove') dispatch(deleteNumber());
