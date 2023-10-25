@@ -22,7 +22,25 @@ export const keyboard = createSlice({
 
         },
         arrowLeftAction: (state, action) => {
-
+            if(state.category === 'checkbox'){
+                state.category = 'keyboard';
+                state.activeKey = '0';
+                return;
+            }
+            if(state.category === 'confirm'){
+                state.category = 'checkbox';
+                state.activeKey = 'Checkbox';
+                return;
+            }
+            if(state.category === 'close'){
+                state.category = 'confirm';
+                state.activeKey = 'ConfirmButton';
+            }
+            else {
+                if(state.activeKey === '1') return;
+                const index = keyboardValues.findIndex(o => o === state.activeKey);
+                state.activeKey = keyboardValues[index - 1];
+            }
         },
         arrowRightAction: (state, action) => {
             if(state.category === 'checkbox'){
