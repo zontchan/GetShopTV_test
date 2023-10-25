@@ -12,7 +12,6 @@ export default function Keyboard() {
 
 
     const handleClick = (key) => {
-        if(key === activeKey) return;
         dispatch(setActiveKey({activeKey: key, category: 'keyboard'}));
         if(key === 'Remove' && phone.length === 0)  return;
         if(key === 'Remove') return dispatch(deleteNumber())
