@@ -9,6 +9,7 @@ import {useEffect, useState} from "react";
 export default function PhoneForm() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const phone = useSelector((state) => state.phoneNumber);
+    const [isConfirmDisabled, setIsConfirmDisabled] = useState(true);
 
 
     useEffect(() => {
@@ -24,7 +25,7 @@ export default function PhoneForm() {
             <p className={styles.subtitle}>и с Вами свяжется наш менеждер для дальнейшей консультации</p>
             <KeyBoard/>
             <AgreementCheckbox/>
-            <ConfirmButton/>
+            <ConfirmButton isDisabled={isConfirmDisabled}/>
         </div>
     );
 }
