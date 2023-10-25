@@ -15,9 +15,21 @@ export const keyboard = createSlice({
             state.activeKey = action.payload.activeKey;
             state.category = action.payload.category;
         },
-    }
+        arrowUpAction: (state, action) => {
+
+        },
+        arrowDownAction: (state, action) => {
+
+        },
+        arrowLeftAction: (state, action) => {
+
+        },
+        arrowRightAction: (state, action) => {
+        },
+
+    },
 });
 
-export const {setActiveKey} = keyboard.actions;
+export const {setActiveKey, arrowUpAction, arrowDownAction, arrowRightAction, arrowLeftAction} = keyboard.actions;
 
 export default keyboard.reducer;
