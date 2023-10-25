@@ -1,0 +1,57 @@
+.closeButton{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 88px;
+    height: 52px;
+    border: 3px solid black;
+}
+.closeButtonContent{
+    position: relative;
+}
+.closeButton::before,
+.closeButton::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width: 27px;
+    height: 3px;
+    margin-left:-13px;
+    margin-top: -1.5px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+.closeButton:after {
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-out;
+    box-shadow: -4px 4px 4px rgba(0,0,0,0.2);
+}
+
+
+
+.phoneEnterPageCloseButton{
+    background-color: white;
+}
+.phoneEnterPageCloseButton:focus{
+    outline: 1px solid black;
+    outline-offset: -7px;
+}
+.phoneEnterPageCloseButton::before,
+.phoneEnterPageCloseButton::after {
+    background-color: black;
+}
+
+
+.finalInfoPageCloseButton{
+    background-color: black;
+}
+.finalInfoPageCloseButton:focus{
+    outline: 1px solid white;
+    outline-offset: -7px;
+}
+.finalInfoPageCloseButton::before,
+.finalInfoPageCloseButton::after {
+    background-color: white;
+}
