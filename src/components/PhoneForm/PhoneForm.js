@@ -7,16 +7,32 @@ import {useEffect, useState} from "react";
 
 
 export default function PhoneForm() {
+    const [isPhoneLengthCorrect, setIsPhoneLengthCorrect] = useState(false);
     const [phoneNumber, setPhoneNumber] = useState('');
-    const phone = useSelector((state) => state.phoneNumber);
     const [isConfirmDisabled, setIsConfirmDisabled] = useState(true);
-
+    const {isChecked}= useSelector((state) => state.checkbox);
+    const phone =useSelector((state) => state.phoneNumber);
 
     useEffect(() => {
+        if(phone.length === 10){
+            setIsPhoneLengthCorrect(true);
+        }
+        else setIsPhoneLengthCorrect(false);
+
         let template = '+7(___)___-__-__';
         phone.forEach(i => template = template.replace(/_/, i));
         setPhoneNumber(template);
-    },[phone]);
+    },[phone])
+
+
+    useEffect(() => {
+        if(isChecked && isPhoneLengthCorrect){
+            setIsConfirmDisabled(false);
+        }
+        else{
+            setIsConfirmDisabled(true);
+        }
+    }, [isChecked, isPhoneLengthCorrect]);
 
     return (
         <div className={styles.phoneForm}>
