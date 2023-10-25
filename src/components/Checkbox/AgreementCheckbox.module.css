@@ -1,0 +1,51 @@
+.agreement{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 6px;
+}
+
+.agreementText{
+    display: inline-block;
+    font-size: 14px;
+    color: #565656;
+    max-width: 70%;
+    text-align: start;
+}
+.checkboxWrapper{
+    width: 40px;
+    height: 40px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.checkboxWrapper.active{
+    outline: 1px solid black;
+    outline-offset: -7px;
+}
+.checkboxWrapper input{
+    display: none;
+}
+.checkboxWrapper label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: transparent;
+    cursor: pointer;
+    content-visibility: hidden;
+    position: absolute;
+    z-index: 10;
+}
+.checkboxWrapper span {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.checkboxWrapper .agreementCheckbox:checked+span {
+    background-image: url("../../../public/static/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
