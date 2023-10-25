@@ -1,0 +1,23 @@
+.phoneForm{
+    margin-top: 72px;
+    max-width: 285px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    text-align: center;
+}
+
+
+.title{
+    font-size: 26px;
+}
+
+.phoneNumber{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.subtitle{
+    font-size: 14px;
+}
+
