@@ -16,7 +16,29 @@ export const keyboard = createSlice({
             state.category = action.payload.category;
         },
         arrowUpAction: (state, action) => {
-
+            if(state.category === 'keyboard'){
+                const index = keyboardValues.findIndex(o => o === state.activeKey);
+                if(state.activeKey === 'Remove' || state.activeKey === '0') {
+                    state.activeKey = keyboardValues[index - 2];
+                    return;
+                }
+                if(['1','2','3'].includes(state.activeKey)) return;
+                state.activeKey = keyboardValues[index-3];
+                return;
+            }
+            if(state.category === 'checkbox'){
+                state.category = 'keyboard';
+                state.activeKey = 'Remove';
+                return;
+            }
+            if(state.category === 'confirm'){
+                state.category = 'checkbox';
+                state.activeKey = 'Checkbox';
+            }
+            if(state.category === 'close'){
+                state.category = 'confirm';
+                state.activeKey = 'ConfirmButton';
+            }
         },
         arrowDownAction: (state, action) => {
             if(state.category === 'keyboard'){
