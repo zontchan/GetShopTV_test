@@ -48,7 +48,7 @@ export default function PhoneForm() {
             dispatch(clearValidityData());
         }
 
-    }, [phone.length]);
+    }, [phone.length, phone, dispatch]);
 
     return (
         <div className={styles.phoneForm}>

@@ -13,9 +13,12 @@ export const phoneNumber = createSlice({
         deleteNumber: (state,action) => {
             state.pop();
         },
+        clearPhone: (state, action) => {
+            state.splice(0, state.length);
+        }
     },
 });
 
-export const {addNumber, deleteNumber} = phoneNumber.actions;
+export const {addNumber, deleteNumber, clearPhone} = phoneNumber.actions;
 
 export default phoneNumber.reducer;
