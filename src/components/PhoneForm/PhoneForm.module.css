@@ -20,4 +20,12 @@
 .subtitle{
     font-size: 14px;
 }
-
+.error{
+    color: #EA0000;
+}
+.validityError{
+    text-transform: uppercase;
+    color: #EA0000;
+    font-weight: 700;
+    padding: 17px 0;
+}
