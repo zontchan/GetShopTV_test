@@ -2,11 +2,11 @@ import { v4 as uuidv4 } from 'uuid';
 import {keyboardValues} from '../../data/keyboardValues';
 import styles from './Keyboard.module.css';
 import {useDispatch, useSelector} from "react-redux";
-import {setActiveKey} from "../../reducers/keyboardReducer";
+import {setActiveKey} from "../../reducers/phoneFormReducer";
 import {addNumber, deleteNumber} from "../../reducers/phoneNumberReducer";
 
 export default function Keyboard() {
-    const {activeKey} = useSelector((state) => state.keyboard);
+    const {activeKey} = useSelector((state) => state.phoneForm);
     const phone =useSelector((state) => state.phoneNumber);
     const dispatch = useDispatch();
 

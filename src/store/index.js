@@ -1,15 +1,12 @@
-
 import { configureStore } from '@reduxjs/toolkit'
 import phoneNumberReducer from "../reducers/phoneNumberReducer";
-import keyboardReducer from "../reducers/keyboardReducer";
-import checkboxReducer from "../reducers/checkboxReducer";
 import phoneValidityReducer from "../reducers/phoneValidityReducer";
+import phoneFormReducer from "../reducers/phoneFormReducer";
 
 const store = configureStore({
     reducer: {
         phoneNumber:phoneNumberReducer,
-        keyboard: keyboardReducer,
-        checkbox: checkboxReducer,
+        phoneForm: phoneFormReducer,
         validNumber: phoneValidityReducer,
     },
 })

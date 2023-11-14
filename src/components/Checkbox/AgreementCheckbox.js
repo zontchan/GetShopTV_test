@@ -1,10 +1,9 @@
 import styles from "./AgreementCheckbox.module.css";
 import {useDispatch, useSelector} from "react-redux";
-import {setIsChecked} from "../../reducers/checkboxReducer";
+import {setIsChecked} from "../../reducers/phoneFormReducer";
 
 export default function AgreementCheckbox() {
-    const {isChecked}= useSelector((state) => state.checkbox);
-    const {activeKey} = useSelector((state) => state.keyboard);
+    const {activeKey, isChecked} = useSelector((state) => state.phoneForm);
     const dispatch = useDispatch();
 
     return (

@@ -8,37 +8,19 @@ import {clearValidityData, getPhoneValidity} from "../../reducers/phoneValidityR
 
 
 export default function PhoneForm() {
-    const [isPhoneLengthCorrect, setIsPhoneLengthCorrect] = useState(false);
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [isConfirmDisabled, setIsConfirmDisabled] = useState(true);
-    const {isChecked}= useSelector((state) => state.checkbox);
+    const {isChecked}= useSelector((state) => state.phoneForm);
     const phone =useSelector((state) => state.phoneNumber);
-
-
     const {isValid: isPhoneValid, error} = useSelector((state) => state.validNumber);
+    const isPhoneLengthCorrect = phone.length === 10;
+    const isConfirmDisabled = !(isChecked && isPhoneLengthCorrect && isPhoneValid);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if(phone.length === 10){
-            setIsPhoneLengthCorrect(true);
-        }
-        else setIsPhoneLengthCorrect(false);
-
         let template = '+7(___)___-__-__';
         phone.forEach(i => template = template.replace(/_/, i));
         setPhoneNumber(template);
     },[phone])
-
-
-    useEffect(() => {
-        if(isChecked && isPhoneLengthCorrect){
-            setIsConfirmDisabled(false);
-        }
-        else{
-            setIsConfirmDisabled(true);
-        }
-    }, [isChecked, isPhoneLengthCorrect]);
-
 
     useEffect(() => {
         if (phone.length === 10) {

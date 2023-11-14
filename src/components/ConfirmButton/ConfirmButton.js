@@ -5,7 +5,7 @@ import {clearPhone} from "../../reducers/phoneNumberReducer";
 import {useEffect, useRef} from "react";
 
 export default function ConfirmButton({isDisabled}) {
-    const {activeKey} = useSelector((state) => state.keyboard);
+    const {activeKey} = useSelector((state) => state.phoneForm);
     const ref = useRef(null);
     const dispatch = useDispatch();
     useEffect(() => {

@@ -3,14 +3,17 @@ import {keyboardValues} from "../data/keyboardValues";
 
 const initialState = {
     activeKey: keyboardValues[0],
-    category: 'keyboard'
+    category: 'keyboard',
+    isChecked: false,
 };
 
-
-export const keyboard = createSlice({
-    name: 'keyboard',
+export const phoneForm = createSlice({
+    name: 'phoneForm',
     initialState,
     reducers: {
+        setIsChecked: (state, action) => {
+            state.isChecked = !state.isChecked;
+        },
         setActiveKey: (state, action) => {
             state.activeKey = action.payload.activeKey;
             state.category = action.payload.category;
@@ -115,6 +118,6 @@ export const keyboard = createSlice({
     },
 });
 
-export const {setActiveKey, arrowUpAction, arrowDownAction, arrowRightAction, arrowLeftAction} = keyboard.actions;
+export const {setActiveKey, arrowUpAction, arrowDownAction, arrowRightAction, arrowLeftAction, setIsChecked} = phoneForm.actions;
 
-export default keyboard.reducer;
+export default phoneForm.reducer;

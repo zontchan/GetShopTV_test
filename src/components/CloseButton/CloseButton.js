@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 import {useEffect, useRef} from "react";
 
 export default function CloseButton({buttonStyle}) {
-    const {activeKey} = useSelector((state) => state.keyboard);
+    const {activeKey} = useSelector((state) => state.phoneForm);
     let ref = useRef(null);
     useEffect(() => {
         if(ref.current) {
