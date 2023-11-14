@@ -1,5 +1,5 @@
 import './App.css';
-import {HashRouter as Router,Route, Routes} from "react-router-dom";
+import {MemoryRouter as Router,Route, Routes} from "react-router-dom";
 import PromoPage from "./pages/Promo/PromoPage";
 import PhoneEnterPage from "./pages/PhoneEnter/PhoneEnterPage";
 import FinalInfoPage from "./pages/FinalInfo/FinalInfoPage";
