@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/smarttv-microsite/static/css/main.8fec5c06.css",
-    "main.js": "/smarttv-microsite/static/js/main.1f00340b.js",
+    "main.js": "/smarttv-microsite/static/js/main.e1dd4aff.js",
     "static/media/background.png": "/smarttv-microsite/static/media/background.1d9dde58f312546a3f54.png",
     "index.html": "/smarttv-microsite/index.html",
     "static/media/check.svg": "/smarttv-microsite/static/media/check.34f19d5f1a61e7f4ca34.svg",
     "main.8fec5c06.css.map": "/smarttv-microsite/static/css/main.8fec5c06.css.map",
-    "main.1f00340b.js.map": "/smarttv-microsite/static/js/main.1f00340b.js.map"
+    "main.e1dd4aff.js.map": "/smarttv-microsite/static/js/main.e1dd4aff.js.map"
   },
   "entrypoints": [
     "static/css/main.8fec5c06.css",
-    "static/js/main.1f00340b.js"
+    "static/js/main.e1dd4aff.js"
   ]
 }
