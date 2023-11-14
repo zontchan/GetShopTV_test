@@ -15,7 +15,7 @@ export default function PhoneForm() {
     const phone =useSelector((state) => state.phoneNumber);
 
 
-    const {isValid: isPhoneValid} = useSelector((state) => state.validNumber);
+    const {isValid: isPhoneValid, error} = useSelector((state) => state.validNumber);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -56,6 +56,7 @@ export default function PhoneForm() {
             <div className={(isPhoneValid !== null) && isPhoneValid === false && phone.length === 10 ? `${styles.phoneNumber} ${styles.error}` : styles.phoneNumber}>{phoneNumber}</div>
             <p className={styles.subtitle}>и с Вами свяжется наш менеждер для дальнейшей консультации</p>
             <KeyBoard/>
+            {error && <div className={styles.validityError}>Не удалось произвести валидацию номера</div>}
             {((isPhoneValid !== null) && isPhoneValid === false && phone.length === 10) ? <div className={styles.validityError}>Неверно введен номер</div> : <AgreementCheckbox/>}
             <ConfirmButton isDisabled={isConfirmDisabled}/>
         </div>

@@ -1,5 +1,5 @@
 .phoneForm{
-    margin-top: 72px;
+    margin-top: 52px;
     max-width: 285px;
     display: flex;
     flex-direction: column;
@@ -27,5 +27,5 @@
     text-transform: uppercase;
     color: #EA0000;
     font-weight: 700;
-    padding: 17px 0;
+
 }
