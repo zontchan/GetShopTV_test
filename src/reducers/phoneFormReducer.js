@@ -1,5 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {keyboardValues} from "../data/keyboardValues";
+import {addNumber, deleteNumber} from "./phoneNumberReducer";
 
 const initialState = {
     activeKey: keyboardValues[0],
@@ -117,7 +118,35 @@ export const phoneForm = createSlice({
 
     },
 });
-
+export const handleKeyDown = (props) => (dispatch, getState) => {
+    const {phoneForm: {category, activeKey}, phoneNumber} = getState();
+    const {key, code} = props;
+    if(key === 'Enter'){
+        if(category === 'keyboard') {
+            if(activeKey === 'Remove') dispatch(deleteNumber());
+            else {
+                if (phoneNumber.length === 10) return;
+                dispatch(addNumber(activeKey));
+            }
+        }
+        if(category === 'checkbox'){
+            dispatch(setIsChecked());
+        }
+    }
+    if(key === 'Backspace'){
+        dispatch(setActiveKey({activeKey: 'Remove', category: 'keyboard'}));
+        dispatch(deleteNumber());
+    }
+    if(!isNaN(key) && code !== 'Space'){
+        if(phoneNumber.length === 10) return;
+        dispatch(setActiveKey({activeKey: key, category: 'keyboard'}))
+        dispatch(addNumber(key));
+    }
+    if(key === 'ArrowUp') dispatch(arrowUpAction());
+    if(key === 'ArrowDown') dispatch(arrowDownAction());
+    if(key === 'ArrowRight') dispatch(arrowRightAction());
+    if(key === 'ArrowLeft') dispatch(arrowLeftAction());
+}
 export const {setActiveKey, arrowUpAction, arrowDownAction, arrowRightAction, arrowLeftAction, setIsChecked} = phoneForm.actions;
 
 export default phoneForm.reducer;
