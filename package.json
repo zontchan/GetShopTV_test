@@ -2,7 +2,7 @@
   "name": "intro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zontchan.github.io/GetShopTV_test",
+  "homepage": "https://zontchan.github.io/smarttv-microsite/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
